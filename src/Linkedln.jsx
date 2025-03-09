@@ -115,11 +115,11 @@ function LinkedlnIntro(){
 
           <img src="PhoneFrame.png" className="absolute xl:left-[948px] lg:left-[680px] justify-self-center xl:w-[250px] w-[200px] xl:h-[520px] h-[400px] xl:top-20 lg:top-15 sm:top-[520px] -bottom-9  xl:flex"></img>
 
-          <div className="lg:absolute xl:top-26 lg:top-20 lg:mt-0 mt-12 xl:left-[948px] left-[675px] xl:w-[250px] w-[210px] xl:h-[450px] h-[345px] px-5.5 overflow-scroll rounded-xl" style={{ backgroundSize:"cover", scrollbarWidth:"none"}}>
+          <div className="lg:absolute xl:top-26 lg:top-20 lg:mt-0 mt-12 xl:left-[948px] left-[675px] xl:w-[250px] w-[210px] xl:h-[450px] h-[345px] px-5.5 overflow-y-auto rounded-xl z-50" style={{ scrollbarWidth:"none"}}>
           <table1 className="w-full my-6">
-              <tbody className="bg-black border ">
+              <tbody className="bg-black border z-50">
                 {post.map((post, index) => (
-                  <tr key={index} className="hover:bg-emerald-700">
+                  <tr key={index} className="hover:bg-emerald-700 z-50">
                     <td className="border border-t-0 border-gray-400 px-2 py-2 w-fit text-white text-[12px] font-Inter font-light">
                       {post.title}
                     </td>
