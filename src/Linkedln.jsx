@@ -83,10 +83,12 @@ function LinkedlnIntro(){
 
 
   return(
-    <div className="relative h-full w-full xl:mb-96 lg:mb-20 sm:mb-[520px] mb-80 " >
-      <img src="linkedlnRobo.png" className="absolute lg:top-[500px] -bottom-96 sm:flex xl:left-0 lg:-left-8 -left-10 lg:h-fit h-72"></img>
-      
-      <div className="h-fit w-full flex justify-items-start flex-col  pt-26">
+    <div className="relative h-fit w-full xl:pb-[600px] lg:pb-[500px] sm:pb-15 pb-10 " >
+      <img src="linkedlnRobo.png" className="absolute lg:top-[500px] bottom-7 sm:flex xl:left-0 lg:-left-8 -left-10 xl:h-fit xl:w-fit lg:h-68 sm:h-80 h-64"></img>
+
+
+      {/* All Linkedln Components */}
+      <div className="h-fit w-full flex justify-items-start flex-col ">
   
         <div className="flex flex-row gap-2 xl:px-[180px] lg:px-[148px] sm:px-20 px-10">
           <img src="image.png" className="w-fit h-fit "></img>

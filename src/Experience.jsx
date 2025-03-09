@@ -235,7 +235,7 @@ function Experience() {
           </div>
         </div>
         
-        <div className="flex flex-row gap-8 overflow-x-scroll overflow-y-hidden pt-12  pb-10 h-full" style={{scrollbarWidth:"none", scrollBehavior:"revert-layer"}} ref={ref}>
+        <div className="flex flex-row gap-8 overflow-x-scroll overflow-y-hidden pt-12 h-full" style={{scrollbarWidth:"none", scrollBehavior:"revert-layer"}} ref={ref}>
         {cardData.map((data, index) => (
             <ContentCard
               key={index}

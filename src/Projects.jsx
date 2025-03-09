@@ -47,10 +47,10 @@ function ProjectCard({img,Tittle,Company, Technologies}) {
           <div className=" max-w-full z-10 ">
             <button className=" lg:w-[133px] lg:h-[42px] w-28 h-8 flex items-center rounded-full bg-gradient-to-r from-[#A5B4FC] to-[#EA79FF] px-[1px]  py-[1px] overflow-hidden">
               <div className=" bg-black hover:bg-[#3E3895] h-full w-full rounded-full flex items-center justify-between">
-                <span className="text-white font-normal leading-relaxed text-[13px] pl-8 font-Inter">
+                <span className="text-white font-normal leading-relaxed text-[13px] xl:pl-8 lg:pl-7 sm:pl-6 pl-5.5 font-Inter w-fit">
                   Details
                 </span>
-                <div className="lg:w-[42px] h-8 w-8 lg:h-[42px]  rounded-full  bg-gradient-to-r from-[#F9A2D4] via-[#C261FF] to-[#9747FF] flex items-center justify-center hover:rotate-37">
+                <div className=" lg:w-[42px] h-8 w-8 lg:h-[42px]  rounded-full  bg-gradient-to-r from-[#F9A2D4] via-[#C261FF] to-[#9747FF] flex items-center justify-center hover:rotate-37">
                   <svg
                     width="10"
                     height="10"
@@ -128,9 +128,9 @@ function Projects() {
 
           {/* drop-shadow-[0px_4px_10px_#93607D] */}
 
-          <Link to="/AllProject" className=" lg:w-[147px] w-32 lg:h-[46px] sm:h-10 flex items-center rounded-full bg-gradient-to-r from-[#A5B4FC] to-[#EA79FF] px-[1px]  py-[1px] overflow-hidden" >
+          <Link to="/AllProject" className=" lg:w-[147px] sm:w-32 w-40 lg:h-[46px] h-10 flex items-center rounded-full bg-gradient-to-r from-[#A5B4FC] to-[#EA79FF] px-[1px]  py-[1px] overflow-hidden" >
             <div className=" bg-black hover:bg-[#3E3895] h-full w-full rounded-full flex items-center justify-between">
-              <span className="text-white font-normal leading-relaxed text-[13px] lg:px-6 pl-5 font-Inter">
+              <span className="text-white font-normal leading-relaxed text-[13px] lg:px-6 sm:pl-5 pl-5  font-Inter">
                 View All
               </span>
               <div className="lg:w-[46px] lg:h-[46px] h-10 w-10 rounded-full  bg-gradient-to-r from-[#F9A2D4] via-[#C261FF] to-[#9747FF] flex items-center justify-center hover:rotate-37">

@@ -11,7 +11,7 @@ function ProjectCard({img,Tittle,Company, Technologies}) {
     
       
       <div
-        className={`overflow-hidden relative xl:p-7 xl:py-7 p-5 py-5 max-w-full rounded-xl border border-solid border-[color:var(--Dark-12,#1C1C21)] lg:min-h-[460px] xl:w-[325px] w-72 max-md:pl-5 min-h-[477px] ${isHovered?"shadow-2xl shadow-[#93607d7c]" :""} `}
+        className={`overflow-hidden relative xl:p-7 xl:py-7 p-5 py-5 max-w-full rounded-xl border border-solid border-[color:var(--Dark-12,#1C1C21)] lg:min-h-[550px] xl:w-[330px] w-72 max-md:pl-5 min-h-[477px] ${isHovered?"shadow-2xl shadow-[#93607d7c]" :""} `}
         style={{
           background:
           isHovered?  "linear-gradient(to bottom right, rgba(14, 14, 16, 1), rgba(14, 31, 36, 0.61), rgba(147, 96, 125, 0.22))":  "linear-gradient(to bottom right, rgba(147, 96, 125, 0.22), rgba(83, 57, 72, 0.45), rgba(14, 14, 16, 1))",
@@ -87,6 +87,7 @@ function AllProject(){
 
   const projectCard = [
     {
+      id:4,
       Tittle:"Six Axis Robotic Manipulator(Payload 4Kg)",
       Company:"Orangewood Lab",
       img:"6axis-manipulator.jpg",
@@ -94,6 +95,7 @@ function AllProject(){
       extrapoints: ["Mechanical design , assembly and manufacture of six-axis manipulator by DH parameter","Mechanical design , assembly and manufacture of six-axis manipulator by DH parameter"],
     },
     {
+      id:4,
       Tittle:"Dual Encoder Backlash Compensate of gearbox and Actuator control",
       Company:"Orangewood Lab",
       img:"dual_encoder_project.jpg",
@@ -101,11 +103,47 @@ function AllProject(){
       extrapoints: ["∗ Research And Develop a hardware set up dual encode project","Tech found: gearbox positional control by SSI And SPI communication and control PWM interface"],
     },
     {
+      id:4,
       Tittle:"Robotic finger Hand (holding capacity 2Kg)",
       Company:"Orangewood Lab",
       img:"Robotic_Hand.png",
       Tech:"Servo Actuators,ESP,Flex Sensors,C++ Programming, Python Tkinter (GUI),3D Printing, Sketch Design,Motion Planning",
-      extrapoints: ["∗ Research And Develop a hardware set up dual encode project","Tech found: gearbox positional control by SSI And SPI communication and control PWM interface"],
+      description: ["∗ Research And Develop a hardware set up dual encode project","Tech found: gearbox positional control by SSI And SPI communication and control PWM interface"],
+    },
+    {
+      id:4,
+      Tittle:"PCB Stator Motor",
+      Company:"Orangewood Lab",
+      vedio:"",
+      img:"pcb_motor.png",
+      Tech:"SolidWorks,KiCad,PCB Manufacturing,ESC PWM Integration,ANSYS Maxwell, Electromagnetic Simulation",
+      description : [
+        "∗ Research And Develop a hardware set up dual encode project",
+        "Tech found: gearbox positional control by SSI And SPI communication and control PWM interface"],
+    },
+    {
+      id:5,
+      Tittle:"Mahindra thar (A.M.R)Mahindra thar brake pedal automate with lidar",
+      Company:"Swatt",
+      vedio:"",
+      img:"mahindra thar brake pedal.jpg",
+      Tech:"Velodyne LiDAR,C++,CAN Protocol,WheelOdometry,LeadScrew Mechanism,Crank Lever Mechanism,Laser Cutting,CNC",
+      description : [
+        "∗ Research And Develop a hardware set up dual encode project",
+        "Tech found: gearbox positional control by SSI And SPI communication and control PWM interface"],
+    },
+    {
+      id: 6,
+      Tittle:"Three Axis Manipulator Attachment and Manipulator testing components",
+      Company:"Orangewood Lab",
+      vedio:"",
+      image:"forhealth.jpg",
+      Tech:"BLDC Motors,Lead Screw Mechanism,Encoders,Electromagnetic Brakes,Torque Sensors, Harmonic Gearbox,SolidWork",
+      description : [
+        "∗ Research And Develop a hardware set up dual encode project",
+        "Tech found: gearbox positional control by SSI And SPI communication and control PWM interface",
+        
+      ],
     }
   ];
 
@@ -129,7 +167,7 @@ function AllProject(){
 
         </div>
 
-        <div className="flex lg:flex-row lg:flex-nowrap flex-wrap xl:gap-15 lg:gap-6 gap-7 pt-[50px] items-center justify-center">
+        <div className="flex flex-wrap xl:gap-8 lg:gap-6 gap-7 pt-[50px] items-center justify-center">
           {projectCard.map((project, index)=>(
             <ProjectCard 
               key={index}

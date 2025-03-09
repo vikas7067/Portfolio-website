@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const navigationItems = [
   { text: "Home", isActive: false, path: "/" },
   { text: "Experience", isActive: false, path: "/Experience" },
-  { text: "Projects", isActive: false, path: "/Projects" },
+  { text: "Projects", isActive: false, path: "/AllProject" },
   { text: "Skills", isActive: false, path: "/Skills" },
   { text: "Education", isActive: false, path: "/Education" },
   { text: "Certification", isActive: false, path: "/Certification" },
@@ -54,7 +54,7 @@ const NavigationBar = () => {
   const Mobilemenu = () => {
     return (
       <>
-        <div className="grid gap-10 h-fit sm:w-1/2 w-fit border p-5 justify-items-center place-content-start absolute z-50 bg-[#281F24]" ref={mobileMenuRef} >
+        <div className="grid gap-10 h-fit sm:w-1/2 w-fit border p-15 justify-items-center place-content-start absolute z-50 bg-[#281F24]" ref={mobileMenuRef} >
           <div className="flex items-center gap-5 w-full">
             <div className="text-white text-base font-K2D font-bold leading-1 flex items-center gap-2">
               Vikash Chauhan
@@ -72,7 +72,7 @@ const NavigationBar = () => {
             ))}
           </div>
 
-          <button
+          <Link to="/Contact"
               className=" z-50 w-fit h-10
           bg-gradient-to-r from-[#3E3895] to-[#9747FF] rounded-full flex justify-between "
             >
@@ -82,7 +82,7 @@ const NavigationBar = () => {
               </span>
 
               {/* Circular Icon Container */}
-            </button>
+            </Link>
 
         </div>
       </>

@@ -21,8 +21,10 @@ function About() {
         className=" xl:h-fit xl:w-fit h-80  absolute xl:right-0 -right-8 xl:top-[500.05px] bottom-20 md:flex hidden"
       />
 
-      <div className="w-full xl:px-[148px] sm:px-20 px-10 pt-10 h-fit pb-28 ">
-        <div className=" w-full place-items-center">
+      <div className="w-full xl:px-37 sm:px-20 px-10 pt-10 h-fit sm:pb-28 pb-20 ">
+
+        {/* Top Heading */}
+        <div className=" w-full place-items-center lg:pb-30 md:pb-28 pb-15">
           <h1 className="font-K2D sm:font-extrabold lg:text-[48px] sm:text-[36px] text-3xl font-bold text-white p-0">
             About Me
           </h1>
@@ -33,12 +35,17 @@ function About() {
           </div>
         </div>
 
-        <div className="flex lg:flex-row flex-col gap-20 w-full h-full justify-between items-center lg:pt-30 md:pt-28 pt-20">
+
+        {/* contain profile photo and Introduction */}
+        <div className="flex lg:flex-row flex-col sm:gap-20 gap-15 w-full h-full justify-between items-center ">
+
+
+          {/* Profile and Linkedln Button */}
           <div className="gap-0">
             <img
               src="VKProfile.png"
               className="p-0 xl:h-full sm:h-60 h-52 xl:w-full sm:w-64 w-56"
-            ></img>
+            />
 
             <a className="-top-5 xl:w-[275px] sm:w-64 w-56  sm:h-[57px] h-13 flex items-center  rounded-full shadow-lg drop-shadow-[0px_4px_10px_#93607D] bg-gradient-to-r from-[#A5B4FC] to-[#EA79FF] px-0.5  p-0.5 overflow-hidden"
             href="https://www.linkedin.com/in/vikashofficial2848">
@@ -114,7 +121,7 @@ function About() {
                 </svg>
 
                 <h3 className="xl:text-2xl sm:text-[22px] text-[18px] font-normal text-[#CACACE]">
-                  Introduction
+                  Contact Information
                 </h3>
               </div>
 
@@ -153,7 +160,7 @@ function About() {
                   </a>
 
                   <a
-                    href="https://x.com/Vikash179532"
+                    href="https://x.com/Vikash179532" target="blank"
                     className="flex overflow-hidden justify-center  items-center self-stretch rounded-full bg-gradient-to-b from-[#EA79FF] to-[#9747FF] xl:h-12 xl:w-12 sm:h-11 sm:w-11 w-9 h-9 sm:p-1 p-0.5"
                     aria-label="Social media"
                   >
@@ -177,7 +184,7 @@ function About() {
                     Lets Work
                   </Link>
 
-                  <a className="overflow-hidden flex-1 gap-2.5 self-stretch md:px-6 px-3 rounded-lg xl:h-12 h-11 border border-[#9747FF] bg-black border-solid basis-0 max-md:px-4 text-white w-fit lg:text-lg text-sm"
+                  <a className="overflow-hidden flex-1 gap-2.5 self-stretch md:px-6 px-3 rounded-lg xl:h-12 h-11 border border-[#9747FF] bg-black border-solid basis-0 max-md:px-4 text-white w-fit lg:text-lg text-sm" target="blank"
                   href="https://drive.google.com/file/d/18_nS_NIfniiWPSNhnmIM03EpW6N97h90/view?usp=drive_link">
                     Download CV
                   </a>

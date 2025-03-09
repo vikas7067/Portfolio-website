@@ -74,7 +74,7 @@ function Herosection() {
         {/* Animated Text */}
 
         {/* CV Button */}
-        <a className="relative md:w-[214px] w-42 md:h-[49px] h-10 flex items-center rounded-full shadow-lg shadow-[#F9A2D4] bg-gradient-to-r from-[#A5B4FC] to-[#EA79FF] px-0.5  py-0.5 " href="https://drive.google.com/file/d/18_nS_NIfniiWPSNhnmIM03EpW6N97h90/view?usp=drive_link" target="blank">
+        <a className="relative md:w-[214px] w-42 md:h-[49px] h-10 flex items-center rounded-full shadow-lg shadow-[#F9A2D4] bg-gradient-to-r from-[#A5B4FC] to-[#EA79FF] sm:px-0.5  sm:py-0.5 p-[1px] " href="https://drive.google.com/file/d/18_nS_NIfniiWPSNhnmIM03EpW6N97h90/view?usp=drive_link" target="blank">
           <div className=" bg-black hover:bg-[#3E3895] h-full w-full rounded-full flex items-center">
             <span className="text-white md:font-normal font-light leading-relaxed md:text-[13px] text-xs md:px-9 px-5 font-Inter">
               Download my CV

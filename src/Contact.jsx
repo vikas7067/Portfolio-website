@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <div className="relative pb-15 xl:px-[168px] sm:px-20 px-8">
+    <div className="relative pb-15 xl:px-[168px] sm:px-20 px-8 ">
       <img className="absolute lg:left-[155px] md:left-20 left-0 xl:w-fit w-xs top-0" src="Vikas.png" />
       <img
         src="WorkMan.png"
@@ -8,10 +8,10 @@ function Contact() {
       ></img>
 
       <div className="flex flex-col items-center ">
-        <h1 className="uppercase text-white xl:pl-32 md:pl-60 sm:pl-48 font-Manrope font-semibold lg:text-4xl text-3xl align-middle h-full z-40">
+        <h1 className="uppercase text-white xl:pl-32 lg:pl-44 md:pl-60 sm:pl-48 font-Manrope font-semibold lg:text-4xl text-3xl align-middle h-full z-40">
           <div className="flex gap-3 items-center">
             <span className="">Let's</span>{" "}
-            <button className="bg-gradient-to-b from-[#9747FF] to-[#93607D] h-[66px] w-[66px] rounded-full align-middle place-items-center">
+            <button className="bg-radial to-[#9747FF] from-[#93607D] h-[66px] w-[66px] rounded-full align-middle place-items-center">
               <svg
                 width="22"
                 height="21"

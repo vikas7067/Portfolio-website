@@ -35,8 +35,20 @@ function EducationCard({ img, clg, Course, link}) {
             <p className="xl:mt-2 mt-1.5 text-sm xl:leading-5 text-neutral-500 z-20 justify-start">
               {Course}
             </p>
-            <a href={link} className="w-[42px] h-[42px] rounded-full bg-radial to-[#3E3895] from-[#CC4CC0] z-20">
-
+            <a href={link} className="w-[42px] h-[42px] rounded-full bg-radial to-[#3E3895] from-[#CC4CC0] z-20 flex items-center justify-center">
+            <svg
+                  width="11"
+                  height="11"
+                  viewBox="0 0 11 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="hover:text-white "
+                >
+                  <path
+                    d="M8.84469 4.6628L1.67029 10.4545L0.871635 9.16736L8.04534 3.37556L2.74201 2.47535L3.01075 0.892172L10.7018 2.19769L9.22376 10.9051L7.82538 10.6678L8.84469 4.6628Z"
+                    fill="white"
+                  />
+                </svg>
             </a>
           </div>
         </div>
@@ -82,19 +94,19 @@ function Education() {
       img: "https://cdn.builder.io/api/v1/image/assets/a587ba5ee83947b1a3571920d414175b/15da8c0e252374ae932c6fda4232d0eb3d98491e4934c035d2e24306bbd54823?placeholderIfAbsent=true",
       clg: "Rustamji Institute of Technology Tekanpur Gwalior",
       Course: "Bachelor of Technology in Mechanical Engineering • 2020 - 2024",
-      link: "",
+      link: "https://rjit.ac.in/",
     },
     {
-      img: "https://www.manufacturingtodayindia.com/cloud/2023/05/24/QM5cfmDU-OrangeWood-1200x675.png",
-      clg: "Rustamji Institute of Technology Tekanpur Gwalior",
-      Course: "Higher Secondary or Tntermediate • 2020 - 2024",
-      link: "",
+      img: "ModelSchool.jpg",
+      clg: "Govt. Model School ,Morar Gwalior",
+      Course: "Physics, Chemistry, Maths (Senior Secondary) • 2019 - 2020",
+      link: "https://schools.org.in/gwalior/23040502138/govt-hss-model-9-12-morar.html",
     },
     {
-      img: "https://www.manufacturingtodayindia.com/cloud/2023/05/24/QM5cfmDU-OrangeWood-1200x675.png",
-      clg: "Rustamji Institute of Technology Tekanpur Gwalior",
-      Course: "Bachelor of Technology in Mechanical Engineering • 2020 - 2024",
-      link: "",
+      img: "ModelSchool.jpg",
+      clg: "Govt. Model School ,Morar Gwalior",
+      Course: "Physics, Chemistry, Maths (Senior Secondary) • 2019 - 2020",
+      link: "https://schools.org.in/gwalior/23040502138/govt-hss-model-9-12-morar.html",
     },
   ];
 
@@ -190,7 +202,7 @@ function Education() {
           ref={ref}
         >
           {cardData.map((data, index) => (
-            <EducationCard key={index} img={data.img} clg={data.clg} Course={data.Course} />
+            <EducationCard key={index} img={data.img} clg={data.clg} Course={data.Course} link={data.link}/>
           ))}
         </div>
       </div>

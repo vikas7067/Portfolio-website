@@ -8,6 +8,7 @@ import Education from "./Education";
 import Skill from "./Skill";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import About from "./About";
 
 function App() {
  
@@ -23,6 +24,7 @@ function App() {
       <Route path="/AllProject" element={<AllProject/>}></Route>
       <Route path="/Skills" element={<Skill/>}></Route>
       <Route path="/Contact" element={<Contact/>}></Route>
+      <Route path="/About" element={<About/>}></Route>
       </Routes>
       <Message/>
       <Footer/>
