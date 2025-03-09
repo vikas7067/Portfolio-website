@@ -1,4 +1,63 @@
+import { useState } from "react";
+import axios from "axios";
+
 function Contact() {
+
+  const [isFormValidate, setIsFormValidate] = useState(false);
+    const [error, setError] = useState({}); // error is assigned an empty object because it get the value after the validate function is performed
+  
+    const Validate = () => {
+      let errorText = {};
+      let isValid = true;
+  
+      const emailFormat = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (formValue.Email.trim() === "") {
+        errorText.email = "Email is required";
+        isValid = false;
+      } else if (!emailFormat.test(formValue.Email)){
+        errorText.email = "Please enter a valid email address";
+        isValid = false;
+      }
+  
+      
+  
+      setIsFormValidate(isValid);
+      setError(errorText);
+    };
+    
+    const [formValue, setformValue]  = useState({
+      Name:"",
+      Email:"",
+      Message:""
+    })
+  
+    const handleonchange = (e)=>{
+      const {name, value} = e.target; //destructing means can use the keys inside object by their names otherwise we have to it using obj.key
+      setformValue({...formValue, [name]:value});
+      Validate();
+    }
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      Validate();
+      if (isFormValidate) {
+        axios
+        .post("https://vikashofficialresearcher.onrender.com/Form", formValue)
+        .then((response) => {
+          console.log("Form submitted successfully:", response.data);
+        })
+        .catch((error) => {
+          console.error("Error submitting form:", error);
+        });
+    } else {
+      console.log("Form validation failed");
+      }
+    };
+  
+
+
+
+
   return (
     <div className="relative pb-15 xl:px-[168px] sm:px-20 px-8 ">
       <img className="absolute lg:left-[155px] md:left-20 left-0 xl:w-fit w-xs top-0" src="Vikas.png" />
@@ -38,7 +97,7 @@ function Contact() {
               "linear-gradient(to bottom right, rgba(14, 14, 16, 1), rgba(83, 57, 72, 0.45), rgba(147, 96, 125, 0.22))",
           }}
         >
-          <form className="grid gap-4 " onSubmit={{}}>
+          <form className="grid gap-4 " onSubmit={handleSubmit}>
             <div className="grid gap-0.5">
               <label className="text-[#808D9E] text-sm leading-relaxed font-Inter">
                 Name
@@ -47,8 +106,10 @@ function Contact() {
                 type="text"
                 className="min-w-64 w-full h-10  text-sm ring-offset-0 focus:outline-none border border-b-[#E2E2EA] border-l-0 border-r-0 border-t-0 focus:ring-1 focus:ring-[#93607da0]  text-white"
                 placeholder="Enter Your Name"
-                required
+                required 
+                name="Name" value={formValue.Name} onChange={handleonchange}
               ></input>
+              {error.name && <p className="text-red-500 text-xs">{error.name}</p>}
             </div>
             <div className="grid gap-0.5">
               <label className="text-[#808D9E] text-sm leading-relaxed font-Inter">
@@ -59,7 +120,9 @@ function Contact() {
                 className="min-w-64 w-full h-10  text-sm ring-offset-0 focus:outline-none focus:ring-1 focus:ring-[#93607da0] text-white border border-b-[#E2E2EA] border-l-0 border-r-0 border-t-0"
                 placeholder="Enter your Email"
                 required
+                name="Email" value={formValue.Email} onChange={handleonchange}
               ></input>
+              {error.name && <p className="text-red-500 text-xs">{error.email}</p>}
             </div>
             <div className="grid gap-0.5">
               <label className="text-[#808D9E] text-sm leading-relaxed font-Inter">
@@ -70,7 +133,9 @@ function Contact() {
                 className="min-w-64 w-full sm:h-34 h-30 text-sm ring-offset-0 focus:outline-none focus:ring-1 focus:ring-[#93607da0] text-white border border-b-[#E2E2EA] border-l-0 border-r-0 border-t-0"
                 placeholder="Enter Your Message"
                 required
+                name="Message" value={formValue.Message} onChange={handleonchange}
               ></textarea>
+              {error.message && <p className="text-red-500 text-xs">{error.message}</p>}
             </div>
 
             <div className=" max-w-full z-10 flex justify-center mt-2">

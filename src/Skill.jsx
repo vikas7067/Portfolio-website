@@ -9,6 +9,8 @@ function Skill() {
   const [hoverState, setHover] = useState(false);
     const [hoverState1, setHover1] = useState(false);
     const [isManualScroll, setIsManualScroll] = useState(false);
+    const [isInView, setIsInView] = useState(false); // Track visibility
+    const sectionRef = useRef(null);
   
     const ChangeHover = () => {
       setHover(!hoverState);
@@ -49,14 +51,32 @@ function Skill() {
     }, [isManualScroll]);
   
     useEffect(() => {
+      if (!isInView) return;
       const interval = setInterval(() => {
         if (!isManualScroll && ref.current) {
-          ref.current.scrollBy({ left: 300, behavior: "smooth" });
+          ref.current.scrollBy({ left: 100, behavior: "smooth" });
         }
-      }, 1800);
+      }, 3000);
   
       return () => clearInterval(interval);
-    }, [isManualScroll]);
+    }, [isManualScroll, isInView]);
+
+
+
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => setIsInView(entry.isIntersecting),
+        { threshold: 0.5 }
+      );
+  
+      if (sectionRef.current) observer.observe(sectionRef.current);
+  
+      return () => {
+        if (sectionRef.current) observer.unobserve(sectionRef.current);
+      };
+    }, []);
+
 
 
     const Skill = {
@@ -98,17 +118,17 @@ function Skill() {
     const SkillCard = ({ title, skills }) => (
       <div className=" rounded-lg p-4 shadow-lg m-2 place-self-center place-items-center ">
         <h3 className="text-xl font-K2D font-semibold text-gray-200 mb-12">{title}</h3>
-        <div className="flex xl:gap-16 gap-5 justify-center ">
+        <div className="flex xl:gap-12 sm:gap-5 gap-2 justify-center">
           {skills.map((skill, index) => (
-            <div key={index} className="lg:h-[152px] lg:w-[218px] md:h-32 md:w-52 h-28 w-48 bg-[#5339484a]  flex-col flex justify-center items-center gap-5 mx-2 rotate-y-12 rotate-x-12">
+            <div key={index} className={`lg:h-[152px] lg:w-[200px] md:h-32 md:w-40 h-28 w-36 bg-[#5339484a]  flex-col flex justify-center items-center gap-5 mx-2 rounded-xl ${index % 2 === 0 ? "rotate-y-24 rotate-x-24" :"-rotate-y-24 rotate-x-24"} `}>
               {skill.src ? (
-                <img src={skill.src} alt={skill.name} className="w-12 h-12" />
+                <img src={skill.src} alt={skill.name} className="lg:w-16 lg:h-16 md:h-12 md:w-12 h-10 w-10" />
               ) : (
-                <div className="w-10 h-10 bg-gray-300 flex items-center justify-center">
+                <div className="w-10 h-10 bg-gray-300 flex items-center justify-center -rotate-y-24">
                   <span className="text-xs">No Image</span>
                 </div>
               )}
-              <p className="text-[#93607d75] font-K2D font-bold w-full text-center text-lg">{skill.name}</p>
+              <p className="text-[#93607d75] font-K2D font-bold w-full text-center md:text-lg text-sm">{skill.name}</p>
             </div>
           ))}
         </div>
@@ -118,7 +138,7 @@ function Skill() {
 
 
   return (
-    <div className="relative ">
+    <div className="relative " ref={sectionRef}>
 
       <img src="WorkRobo.png" className="absolute xl:h-fit xl:w-fit w-24 left-0 xl:-top-20 top-7 sm:flex hidden"></img> 
       <img src="WorkMan.png" className="absolute xl:h-fit xl:w-fit h-80 -top-32 -right-10 sm:flex hidden"></img>  
