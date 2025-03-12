@@ -19,6 +19,12 @@ function App() {
     return <div className="lg:pt-4 xl:pt-5 md:pt-5">{children}</div>;
   }
 
+  const Contacts = ({children}) => {
+    return <div className="mt-20">{children}</div>;
+  }
+
+  
+
   return (
     <div
       className="overflow-y-scroll overflow-x-hidden bg-gradient-to-b from-black via-[#0F0A10] to-[#1B0E1E] h-screen"
@@ -33,7 +39,7 @@ function App() {
             <Route path="/Education" element={<Layout><Education /></Layout>}></Route>
             <Route path="/AllProject" element={<Project><AllProject /></Project>}></Route>
             <Route path="/Skills" element={<Layout><Skill /></Layout>}></Route>
-            <Route path="/Contact" element={<Layout><Contact /></Layout>}></Route>
+            <Route path="/Contact" element={<Contacts><Contact/></Contacts>}></Route>
             <Route path="/About" element={<Layout><About /></Layout>}></Route>
           </Routes>
       
