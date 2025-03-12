@@ -119,7 +119,7 @@ function LinkedlnIntro(){
           <table1 className="w-full my-6">
               <tbody className="bg-black border z-50">
                 {post.map((post, index) => (
-                  <tr key={index} className="hover:bg-emerald-700 z-50">
+                  <tr key={index} className="hover:bg-[#AC5FDA] z-50">
                     <td className="border border-t-0 border-gray-400 px-2 py-2 w-fit text-white text-[12px] font-Inter font-light">
                       {post.title}
                     </td>

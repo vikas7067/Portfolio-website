@@ -137,7 +137,7 @@ const NavigationBar = () => {
               {/* Circular Icon Container */}
               <div
                 className="w-[48px] h-[48px] bg-gradient-to-r from-[#EA79FF] to-[#9747FF] 
-      rounded-full flex items-center justify-center justify-self-end hover:rotate-40"
+                rounded-full flex items-center justify-center justify-self-end hover:rotate-40"
               >
                 <svg
                   width="11"
@@ -161,9 +161,9 @@ const NavigationBar = () => {
 
           <div
             className="flex md:hidden flex-row items-center justify-between fixed z-50 w-full
-         bg-gradient-to-r from-[rgba(147,96,125,0.25)] to-[rgba(0,0,0,0.25)] 
-        border-[#49494D] border-[0.5px] backdrop-blur-[5px]
-        rounded-full box-border mt-1.5 px-1.5 py-1"
+            bg-gradient-to-r from-[rgba(147,96,125,0.25)] to-[rgba(0,0,0,0.25)] 
+            border-[#49494D] border-[0.5px] backdrop-blur-[5px]
+            rounded-full box-border mt-1.5 px-1.5 py-1"
           >
             <div className="text-white text-base font-K2D font-bold leading-1 flex items-center gap-2">
               <img
@@ -173,20 +173,7 @@ const NavigationBar = () => {
               />
               Vikash Chauhan
             </div>
-
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              onClick={handleMobileopen}
-            >
-              <path
-                d="M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z"
-                fill="#FEF7FF"
-              />
-            </svg>
+            <img src="Icon.png" onClick={handleMobileopen}/>
           </div>
         </>
       )}

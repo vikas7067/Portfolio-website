@@ -117,7 +117,7 @@ function Skill() {
 
     const SkillCard = ({ title, skills }) => (
       <div className=" rounded-lg p-4 shadow-lg m-2 place-self-center place-items-center ">
-        <h3 className="text-xl font-K2D font-semibold text-gray-200 mb-12">{title}</h3>
+        <h3 className="text-xl font-K2D font-semibold text-gray-200 mb-12 ">{title}</h3>
         <div className="flex xl:gap-12 sm:gap-5 gap-2 justify-center">
           {skills.map((skill, index) => (
             <div key={index} className={`lg:h-[152px] lg:w-[200px] md:h-32 md:w-40 h-28 w-36 bg-[#5339484a]  flex-col flex justify-center items-center gap-5 mx-2 rounded-xl ${index % 2 === 0 ? "rotate-y-24 rotate-x-24" :"-rotate-y-24 rotate-x-24"} `}>

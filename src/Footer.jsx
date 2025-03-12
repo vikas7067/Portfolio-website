@@ -14,7 +14,7 @@ function Footer() {
             <div className="uppercase text-white font-Manrope font-semibold lg:text-4xl sm:text-3xl  text-2xl h-full ">
               <div className="flex gap-3 items-center">
                 <span className="">Let's</span>{" "}
-                <button className="bg-radial to-[#9747FF] from-[#93607D] h-[66px] w-[66px] rounded-full align-middle place-items-center">
+                <button className="bg-linear-180 to-[#9747FF] from-[#a26b8a] h-[66px] w-[66px] rounded-full align-middle place-items-center">
                   <svg
                     width="22"
                     height="21"
@@ -36,35 +36,35 @@ function Footer() {
           </div>
         </div>
 
-        <div className="flex items-center justify-center xl:flex-nowrap flex-wrap w-full font-Manrope  xl:gap-32 lg:gap-16 sm:gap-x-28 gap-x-15 gap-y-5 place-self-center h-full py-5">
+        <div className="flex items-center justify-center xl:flex-nowrap flex-wrap w-full font-Manrope  xl:gap-32 lg:gap-12 md:gap-x-28 sm:gap-x-18 gap-x-24 gap-y-5 place-self-center h-full py-5 uppercase">
           <div className="flex flex-col  text-[#F2F2F3] gap-3 w-fit">
-            <div className="font-semibold text-base text-[#797C86]">Home</div>
-            <Link to="/Experience " className="lg:text-sm text-xs">
+            <div className="font-semibold text-base text-[#797C86]">Navigation</div>
+            <Link to="/Experience " className="lg:text-sm text-xs font-extralight underline decoration-[#797c8657] underline-offset-5">
               Experience
             </Link>
-            <Link to="/AllProject" className="lg:text-sm text-xs">
+            <Link to="/AllProject" className="lg:text-sm text-xs font-extralight underline decoration-[#797c8657] underline-offset-5">
               Projects
             </Link>
-            <Link to="/Education" className="lg:text-sm text-xs">
+            <Link to="/Education" className="lg:text-sm text-xs font-extralight underline decoration-[#797c8657] underline-offset-5">
               Education
             </Link>
           </div>
 
           <div className="flex flex-col text-[#F2F2F3] gap-3">
             <div className="font-semibold text-base text-[#797C86]">
-              Quick Links
+              Quick  Links
             </div>
             <a
               href="https://drive.google.com/file/d/18_nS_NIfniiWPSNhnmIM03EpW6N97h90/view?usp=drive_link"
-              className="lg:text-sm text-xs"
+              className="lg:text-sm text-xs underline decoration-[#797c8657] underline-offset-5 font-extralight"
               target="blank"
             >
               CV
             </a>
-            <Link to="/About" className="lg:text-sm text-xs">
+            <Link to="/About" className="lg:text-sm text-xs underline font-extralight decoration-[#797c8657] underline-offset-5">
               Contact Details
             </Link>
-            <Link to="/Contact" className="lg:text-sm text-xs">
+            <Link to="/Contact" className="lg:text-sm text-xs font-extralight underline decoration-[#797c8657] underline-offset-5">
               Message Me
             </Link>
           </div>
@@ -76,14 +76,14 @@ function Footer() {
             <a
               href="https://www.linkedin.com/in/vikashofficial2848"
               target="_blank"
-              className="lg:text-sm text-xs"
+              className="lg:text-sm text-xs font-extralight underline decoration-[#797c8657] underline-offset-5"
             >
               Linkedln
             </a>
-            <a href="https://github.com/vikas7067" target="blank"  className="lg:text-sm text-xs">
+            <a href="https://github.com/vikas7067" target="blank"  className="lg:text-sm text-xs font-extralight underline decoration-[#797c8657] underline-offset-5">
               Github
             </a>
-            <a href="/" className="lg:text-sm text-xs">
+            <a href="/" className="lg:text-sm text-xs font-extralight underline decoration-[#797c8657] underline-offset-5">
               Leetcode
             </a>
           </div>
@@ -92,13 +92,13 @@ function Footer() {
             <div className="font-semibold text-base text-[#797C86]">
               Social Media
             </div>
-            <a href="https://x.com/Vikash179532" className="lg:text-sm text-xs" target="blank">
+            <a href="https://x.com/Vikash179532" className="lg:text-sm font-extralight  text-xs underline decoration-[#797c8657] underline-offset-5" target="blank">
               Twitter
             </a>
-            <a href="" className="lg:text-sm text-xs" target="blank">
+            <a href="" className="lg:text-sm text-xs font-extralight underline decoration-[#797c8657] underline-offset-5" target="blank">
               Instagram
             </a>
-            <a href="" className="lg:text-sm text-xs">
+            <a href="" className="lg:text-sm text-xs font-extralight underline decoration- decoration-[#797c8657] underline-offset-5">
               Facebook
             </a>
           </div>
@@ -142,7 +142,7 @@ function Footer() {
           </a>
         </div>
 
-        <p className="font-Manrope text-sm font-light text-[#797C86]">
+        <p className="font-Manrope md:text-sm  text-xs font-light text-[#797C86]">
           © 2024 VIKASH CHAUHAN. All rights reserved.
         </p>
       </div>

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // Import styles
 
 function Contact() {
 
@@ -45,6 +47,10 @@ function Contact() {
         .post("https://vikashofficialresearcher.onrender.com/Form", formValue)
         .then((response) => {
           console.log("Form submitted successfully:", response.data);
+          toast.success("Message sent successfully", {
+            position: "bottom-center",
+            autoClose: true,
+          })
         })
         .catch((error) => {
           console.error("Error submitting form:", error);
@@ -70,7 +76,7 @@ function Contact() {
         <h1 className="uppercase text-white xl:pl-32 lg:pl-44 md:pl-60 sm:pl-48 font-Manrope font-semibold lg:text-4xl text-3xl align-middle h-full z-40">
           <div className="flex gap-3 items-center">
             <span className="">Let's</span>{" "}
-            <button className="bg-radial to-[#9747FF] from-[#93607D] h-[66px] w-[66px] rounded-full align-middle place-items-center">
+            <button className="bg-linear-180 to-[#9747FF] from-[#93607D] h-[66px] w-[66px] rounded-full align-middle place-items-center">
               <svg
                 width="22"
                 height="21"
@@ -161,6 +167,7 @@ function Contact() {
                   </div>
                 </div>
               </button>
+              <ToastContainer/>
             </div>
 
 
